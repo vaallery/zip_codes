@@ -7,7 +7,7 @@ class ZoneCalculator
 
     matrix = ZipMatrix.instance.matrix
 
-    zone, filler = matrix[orig[0..2]][dest[0..2].to_i]
+    zone, filler = matrix[orig[0..2].to_i][dest[0..2].to_i]
 
     return zone if !filler || filler == '*'
 

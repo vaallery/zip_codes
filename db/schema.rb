@@ -20,12 +20,14 @@ ActiveRecord::Schema.define(version: 2019_03_28_115451) do
     t.integer "orig_end"
     t.integer "dest_start"
     t.integer "dest_end"
+    t.integer "zone"
     t.integer "mail_type"
     t.integer "filler"
     t.index ["dest_end"], name: "index_zip_exceptions_on_dest_end"
     t.index ["dest_start"], name: "index_zip_exceptions_on_dest_start"
     t.index ["orig_end"], name: "index_zip_exceptions_on_orig_end"
     t.index ["orig_start"], name: "index_zip_exceptions_on_orig_start"
+    t.index ["zone"], name: "index_zip_exceptions_on_zone"
   end
 
 end
